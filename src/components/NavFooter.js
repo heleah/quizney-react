@@ -1,25 +1,29 @@
 import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
-import home from '../assets/home_outlined.svg';
-import bookmarks from '../assets/crown_outlined.svg';
-import add from '../assets/add_outlined.svg';
-import profile from '../assets/profile_outlined.svg';
+import Home from '../assets/home_outlined.svg';
+import HomeActive from '../assets/home_filled.svg';
+import Bookmarks from '../assets/crown_outlined.svg';
+import BookmarksActive from '../assets/crown_filled.svg';
+import Add from '../assets/add_outlined.svg';
+import AddActive from '../assets/add_filled.svg';
+import Profile from '../assets/profile_outlined.svg';
+import ProfileActive from '../assets/profile_filled.svg';
 
 export default function NavFooter() {
   return (
     <Footer>
       <NavLinkStyled exact to='/'>
-        <img src={home} alt='Home Icon' />
+        <NavHome role='img' aria-label='Home' />
       </NavLinkStyled>
       <NavLinkStyled to='/bookmarks'>
-        <img src={bookmarks} alt='Bookmark Icon' />
+        <NavBookmarks role='img' aria-label='Bookmarks' />
       </NavLinkStyled>
       <NavLinkStyled to='/add-question'>
-        <img src={add} alt='Add Icon' />
+        <NavAdd role='img' aria-label='Add Question' />
       </NavLinkStyled>
       <NavLinkStyled to='/profile'>
-        <img src={profile} alt='Profile Icon' />
+        <NavProfile role='img' aria-label='Profile' />
       </NavLinkStyled>
     </Footer>
   );
@@ -38,15 +42,48 @@ const Footer = styled.footer`
 
 const NavLinkStyled = styled(NavLink)`
   border-right: 1px solid black;
-  padding: 1rem;
-  padding-bottom: 0;
+  padding: 0.6rem;
   text-align: center;
 
   &:last-child {
     border-right: none;
   }
+`;
 
-  img {
-    height: 2.5rem;
+const NavItem = styled.div`
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 2.5rem;
+`;
+
+const NavHome = styled(NavItem)`
+  background: center / contain no-repeat url(${Home});
+
+  .active & {
+    background-image: url(${HomeActive});
+  }
+`;
+
+const NavBookmarks = styled(NavItem)`
+  background: center / contain no-repeat url(${Bookmarks});
+
+  .active & {
+    background-image: url(${BookmarksActive});
+  }
+`;
+
+const NavAdd = styled(NavItem)`
+  background: center / contain no-repeat url(${Add});
+
+  .active & {
+    background-image: url(${AddActive});
+  }
+`;
+
+const NavProfile = styled(NavItem)`
+  background: center / contain no-repeat url(${Profile});
+
+  .active & {
+    background-image: url(${ProfileActive});
   }
 `;

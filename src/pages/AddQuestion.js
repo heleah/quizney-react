@@ -19,7 +19,7 @@ export default function AddQuestion() {
         cols='20'
         rows='10'
       ></textarea>
-      <label htmlFor='addtags'>Tags:</label>
+      <label htmlFor='addtags'>Other answer options:</label>
       <input type='text' id='addtags' placeholder='Separate tags by comma' />
       <button>Submit</button>
     </Form>
@@ -62,6 +62,7 @@ const Form = styled.form`
   }
 
   button:hover {
+    transform: scale(1.2);
     background-color: var(--primary);
     color: var(--light);
   }
