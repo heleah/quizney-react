@@ -15,7 +15,7 @@ export default function NavFooter() {
       <NavLinkStyled to='/bookmarks'>
         <img src={bookmarks} alt='Bookmark Icon' />
       </NavLinkStyled>
-      <NavLinkStyled to='/submit-question'>
+      <NavLinkStyled to='/add-question'>
         <img src={add} alt='Add Icon' />
       </NavLinkStyled>
       <NavLinkStyled to='/profile'>
@@ -33,7 +33,7 @@ const Footer = styled.footer`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
   align-items: center;
-  padding: 0;
+  padding: 0.6rem;
 `;
 
 const NavLinkStyled = styled(NavLink)`
