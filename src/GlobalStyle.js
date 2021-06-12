@@ -40,21 +40,6 @@ export default createGlobalStyle`
         font-size: 1.25rem;
     }
 
-    header {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        padding: 1rem 0;
-        background-color: var(--primary);
-        z-index: 10;
-    }
-
-    h1 {
-        margin: 0;
-        text-align: center;
-        color: var(--primary-100);
-    }
-
     main {
         height: 100vh;
         overflow: auto;
