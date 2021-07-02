@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import styled from 'styled-components';
 
 import Header from './components/Header';
 import NavFooter from './components/NavFooter';
@@ -12,6 +11,7 @@ import Profile from './pages/Profile';
 import { quizCards } from './lib/db';
 
 function App() {
+  // eslint-disable-next-line no-unused-vars
   const [cards, setCards] = useState(quizCards);
   const [faveCards, setFaveCards] = useState([]);
 
